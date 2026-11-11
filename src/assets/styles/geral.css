@@ -1,0 +1,34 @@
+@import url("./header.css");
+@import url("./descricao.css");
+@import url("./tech.css");
+@import url("./projetos.css");
+@import url("./footer.css");
+@import url("./msg.css");
+
+@font-face {
+    font-family: font;
+    src: url("../font/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: font;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #020127, #07294e);
+    /* background-color: rgb(2, 1, 39); */
+}
+
+main {
+    width: 100%;
+    height: auto;
+    padding: 5rem 10rem;
+}

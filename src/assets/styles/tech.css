@@ -1,0 +1,82 @@
+#tech {
+    width: 100%;
+    height: auto;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #07294e;
+    padding-bottom: 3rem;
+}
+
+/* Container */
+#tech  > .container-subtitulo-tech {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Radar */
+#tech > .container-subtitulo-tech > .radar-tech {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #007bff;
+    position: relative;
+}
+#tech > .container-subtitulo-tech > .radar-tech::after,
+#tech > .container-subtitulo-tech > .radar-tech::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    z-index: -1;
+    border-radius: 100%;
+    background-color: #007bff;
+    opacity: .8;
+    position: absolute;
+    animation: radar 2s ease-out infinite;
+}
+@keyframes radar {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+#tech > .container-subtitulo-tech > .radar-tech::after {
+    animation-delay: 1s;
+}
+
+/* Subtitulo - tecnológias */
+#tech > .container-subtitulo-tech > .border {
+    border-top: 3px solid #007bff;
+    width: 90px;
+    padding-top: 8px;
+    margin-bottom: 2rem;
+}
+
+#tech > .container-subtitulo-tech > .border > h2 {
+    font-size: 24px;
+    width: 500px;
+}
+
+/* Tipos de tecnológias */
+#tech > .type-tech {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+#tech > .type-tech > li {
+    background-color: #f4f4f4;
+    color: #000;
+    font-weight: bold;
+    padding: .5rem;
+    border-radius: 2px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #07294e;
+        box-shadow: 0 0 8px #007bff;
+        color: #fff;
+    }
+}

@@ -1,0 +1,73 @@
+#descricao {
+    width: 100%;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid #07294e;
+    padding-bottom: 3rem;
+}
+
+/* Container */
+#descricao > .container-subtitulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Radar */
+#descricao > .container-subtitulo > .radar-decricao {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #007bff;
+    position: relative;
+}
+#descricao > .container-subtitulo > .radar-decricao::after,
+#descricao > .container-subtitulo > .radar-decricao::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    z-index: -1;
+    border-radius: 100%;
+    background-color: #007bff;
+    opacity: .8;
+    position: absolute;
+    animation: radar 2s ease-out infinite;
+}
+@keyframes radar {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+#descricao > .container-subtitulo > .radar-decricao::after {
+    animation-delay: 1s;
+}
+
+/* Subtitulo - Sobre mim */
+#descricao > .container-subtitulo > .border {
+    border-top: 3px solid #007bff;
+    width: 75px;
+    padding-top: 8px;
+    margin-bottom: 1rem;
+}
+
+#descricao > .container-subtitulo > .border > h2 {
+    font-size: 24px;
+    width: 500px;
+}
+
+/* Descrição - Sobre mim */
+#descricao > .infor {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#descricao > .infor > p {
+    font-size: 14px;
+    width: 720px;
+    letter-spacing: .5px;
+    line-height: 1.5;
+}

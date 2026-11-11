@@ -1,0 +1,135 @@
+#projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    height: auto;
+}
+
+/* Subtitulo - Meus projetos */
+#projetos > .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    margin-bottom: 3rem;
+}
+#projetos > .container > .border {
+    border-top: 3px solid #007bff;
+    width: 167px;
+    padding-top: 8px;
+    margin-bottom: 2rem;
+}
+
+#projetos > .container > .border > h2 {
+    font-size: 24px;
+    width: 500px;
+}
+
+/* Container */
+#projetos  > .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Radar */
+#projetos > .container > .radar-meu-projeto {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background-color: #007bff;
+    position: relative;
+}
+
+#projetos > .container > .radar-meu-projeto::after,
+#projetos > .container > .radar-meu-projeto::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    z-index: -1;
+    border-radius: 100%;
+    background-color: #007bff;
+    opacity: .8;
+    position: absolute;
+    animation: radar 2s ease-out infinite;
+}
+@keyframes radar {
+    to {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+#projetos > .container > .radar-meu-projeto::after {
+    animation-delay: 1s;
+}
+
+/* ================================================= CARDS ====================================================*/
+
+#projetos > .container-projeto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+}
+
+/* Card */
+#projetos > .container-projeto > .card-project {
+    border: none;
+    background-color: #07294e;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 -2px 8px #07294e;
+}
+
+#projetos > .container-projeto > .card-project > .image {
+    width: 100%;
+    height: 200px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+/* Descrição do projeto */
+#projetos > .container-projeto > .card-project > .descricao-projeto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    padding: 1rem 1.2rem;
+    margin-top: 1rem;
+}
+#projetos > .container-projeto > .card-project > .descricao-projeto > h3 {
+    font-size: 18px;
+}
+
+#projetos > .container-projeto > .card-project > .descricao-projeto > strong {
+    font-size: 12px;
+}
+
+/* Link para acessar o projeto */
+#projetos > .container-projeto > .card-project > .container-link-projeto {
+    width: 100%;
+    padding: 0 1.2rem 1.5rem;
+    font-size: 12px;
+    margin-top: 1rem;
+}
+
+#projetos > .container-projeto > .card-project > .container-link-projeto > a {
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: underline;
+    margin-left: 5px;
+}
